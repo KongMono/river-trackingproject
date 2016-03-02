@@ -1,0 +1,35 @@
+{
+  "name": "projectTracking",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  },
+  "dependencies": {
+    "ngCordova": "~0.1.20-alpha",
+    "font-awesome": "~4.4.0",
+    "ngstorage": "~0.3.10",
+    "ionic-modal-select": "~1.1.2"
+  },
+  "overrides": {
+    "ionic": {
+      "main": [
+        "js/ionic.min.js",
+        "js/ionic.bundle.js"
+      ]
+    },
+    "angular": {
+      "main": [
+        "angular.min.js",
+        "angular.min.js.map"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js",
+        "dist/jquery.min.map"
+      ]
+    }
+  }
+}

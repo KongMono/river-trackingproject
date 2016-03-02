@@ -1,0 +1,101 @@
+
+$river-color-blue:			#3598dc;
+$river-color-red:			#e7505a;
+$river-color-green:			#32c5d2;
+$river-color-purple:		#8E44AD;
+$river-color-white:			#FFF;
+$river-color-grey:			#AAB5BC;
+$river-color-black:			black;
+$river-color-yellow:        #F4D03F;     
+
+.center {
+    text-align: center;   
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.margin0 {
+   margin: 0px;
+}
+
+.padding-inherit {
+   padding: inherit;
+}
+
+.padding0 {
+   padding: 0px;
+}
+
+.font-blue {
+    color: $river-color-blue;
+}
+
+.font-red {
+    color: $river-color-red;
+}
+
+.font-green {
+    color: $river-color-green;
+}
+
+.font-purple {
+    color: $river-color-purple;
+}
+
+.font-white {
+    color: $river-color-white;
+}
+
+.font-grey {
+    color: $river-color-grey;
+}
+
+.font-black {
+    color: $river-color-black;
+}
+
+.font-yellow {
+    color: $river-color-yellow;
+}
+
+.dashboard-blue {
+    background-color: $river-color-blue;
+}
+.dashboard-red {
+    background-color: $river-color-red;
+}
+.dashboard-green {
+    background-color: $river-color-green;
+}
+.dashboard-purple {
+    background-color: $river-color-purple;
+}
+
+.button.ion-android-send {
+  padding-top: 2px;
+}
+
+.circular-square {
+  border-radius: 50%;
+}
+
+.circular-landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}

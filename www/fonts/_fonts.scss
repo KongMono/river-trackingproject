@@ -1,0 +1,967 @@
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANREG.eot");src:url("#{$az-font-path}/ALSANREG.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANREG.woff") format("woff"),url("#{$az-font-path}/ALSANREG.ttf") format("truetype");font-weight:500;font-style:normal;
+}
+
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANBOL.eot");src:url("#{$az-font-path}/ALSANBOL.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANBOL.woff") format("woff"),url("#{$az-font-path}/ALSANBOL.ttf") format("truetype");font-weight:700;font-style:normal;
+}
+
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANLIG.eot");src:url("#{$az-font-path}/ALSANLIG.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANLIG.woff") format("woff"),url("#{$az-font-path}/ALSANLIG.ttf") format("truetype");font-weight:300;font-style:normal;
+}
+
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANITA.eot");src:url("#{$az-font-path}/ALSANITA.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANITA.woff") format("woff"),url("#{$az-font-path}/ALSANITA.ttf") format("truetype");font-weight:500;font-style:italic;
+}
+
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANBIT.eot");src:url("#{$az-font-path}/ALSANBIT.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANBIT.woff") format("woff"),url("#{$az-font-path}/ALSANBIT.ttf") format("truetype");font-weight:700;font-style:italic;
+}
+
+@font-face {
+    font-family:"AllianzSansWeb";src:url("#{$az-font-path}/ALSANLIT.eot");src:url("#{$az-font-path}/ALSANLIT.eot?#iefix") format("embedded-opentype"),url("#{$az-font-path}/ALSANLIT.woff") format("woff"),url("#{$az-font-path}/ALSANLIT.ttf") format("truetype");font-weight:500;font-style:italic;
+}
+
+@font-face {
+    font-family:"all-icons";src:url('#{$az-font-path}/all-icons.eot');src:url('#{$az-font-path}/all-icons.eot?#iefix') format('eot'),url('#{$az-font-path}/all-icons.woff') format('woff'),url('#{$az-font-path}/all-icons.ttf') format('truetype'),url('#{$az-font-path}/all-icons.svg#all-icons') format('svg');
+}
+
+.glyphicon-access-data:before {
+    content: "\E001";
+}
+
+.glyphicon-accident-insurance:before {
+    content: "\E002";
+}
+
+.glyphicon-ad-hoc-confidence:before {
+    content: "\E003";
+}
+
+.glyphicon-add-circle:before {
+    content: "\E004";
+}
+
+.glyphicon-add:before {
+    content: "\E005";
+}
+
+.glyphicon-addressing:before {
+    content: "\E006";
+}
+
+.glyphicon-adjust:before {
+    content: "\E007";
+}
+
+.glyphicon-advising-claims-online:before {
+    content: "\E008";
+}
+
+.glyphicon-advising-claims:before {
+    content: "\E009";
+}
+
+.glyphicon-agenda:before {
+    content: "\E00A";
+}
+
+.glyphicon-all-functions:before {
+    content: "\E00B";
+}
+
+.glyphicon-annualreport-fi:before {
+    content: "\E00C";
+}
+
+.glyphicon-annualreport-se:before {
+    content: "\E00D";
+}
+
+.glyphicon-annualreport:before {
+    content: "\E00E";
+}
+
+.glyphicon-archive:before {
+    content: "\E00F";
+}
+
+.glyphicon-arrow-down-circle:before {
+    content: "\E010";
+}
+
+.glyphicon-arrow-down-filled:before {
+    content: "\E011";
+}
+
+.glyphicon-arrow-down:before {
+    content: "\E012";
+}
+
+.glyphicon-arrow-ffw:before {
+    content: "\E013";
+}
+
+.glyphicon-arrow-frw:before {
+    content: "\E014";
+}
+
+.glyphicon-arrow-left-circle:before {
+    content: "\E015";
+}
+
+.glyphicon-arrow-left-filled:before {
+    content: "\E016";
+}
+
+.glyphicon-arrow-left:before {
+    content: "\E017";
+}
+
+.glyphicon-arrow-right-circle:before {
+    content: "\E018";
+}
+
+.glyphicon-arrow-right-filled:before {
+    content: "\E019";
+}
+
+.glyphicon-arrow-right:before {
+    content: "\E01A";
+}
+
+.glyphicon-arrow-top-circle:before {
+    content: "\E01B";
+}
+
+.glyphicon-arrow-up-circle:before {
+    content: "\E01C";
+}
+
+.glyphicon-arrow-up-filled:before {
+    content: "\E01D";
+}
+
+.glyphicon-arrow-up:before {
+    content: "\E01E";
+}
+
+.glyphicon-asset-management:before {
+    content: "\E01F";
+}
+
+.glyphicon-authorized-capital:before {
+    content: "\E020";
+}
+
+.glyphicon-bank-information:before {
+    content: "\E021";
+}
+
+.glyphicon-basic-information:before {
+    content: "\E022";
+}
+
+.glyphicon-basic-own-capital:before {
+    content: "\E023";
+}
+
+.glyphicon-book-report:before {
+    content: "\E024";
+}
+
+.glyphicon-book:before {
+    content: "\E025";
+}
+
+.glyphicon-building-insurance:before {
+    content: "\E026";
+}
+
+.glyphicon-bulhorn:before {
+    content: "\E027";
+}
+
+.glyphicon-business-clients:before {
+    content: "\E028";
+}
+
+.glyphicon-business:before {
+    content: "\E029";
+}
+
+.glyphicon-calculator-filled:before {
+    content: "\E02A";
+}
+
+.glyphicon-calendar:before {
+    content: "\E02B";
+}
+
+.glyphicon-car-insurance:before {
+    content: "\E02C";
+}
+
+.glyphicon-check-circle:before {
+    content: "\E02D";
+}
+
+.glyphicon-check-master:before {
+    content: "\E02E";
+}
+
+.glyphicon-check:before {
+    content: "\E02F";
+}
+
+.glyphicon-check_circle:before {
+    content: "\E030";
+}
+
+.glyphicon-checkbox-outline:before {
+    content: "\E031";
+}
+
+.glyphicon-checkbox:before {
+    content: "\E032";
+}
+
+.glyphicon-claims-live:before {
+    content: "\E033";
+}
+
+.glyphicon-close-circle:before {
+    content: "\E034";
+}
+
+.glyphicon-cog:before {
+    content: "\E035";
+}
+
+.glyphicon-cog2:before {
+    content: "\E036";
+}
+
+.glyphicon-combi-plus-minus:before {
+    content: "\E037";
+}
+
+.glyphicon-comission:before {
+    content: "\E038";
+}
+
+.glyphicon-comment:before {
+    content: "\E039";
+}
+
+.glyphicon-companies:before {
+    content: "\E03A";
+}
+
+.glyphicon-company-pension-scheme:before {
+    content: "\E03B";
+}
+
+.glyphicon-compare:before {
+    content: "\E03C";
+}
+
+.glyphicon-comparison-table:before {
+    content: "\E03D";
+}
+
+.glyphicon-compliance-statement:before {
+    content: "\E03E";
+}
+
+.glyphicon-composition-region:before {
+    content: "\E03F";
+}
+
+.glyphicon-configurating-rates:before {
+    content: "\E040";
+}
+
+.glyphicon-configurator:before {
+    content: "\E041";
+}
+
+.glyphicon-consulting-tool:before {
+    content: "\E042";
+}
+
+.glyphicon-contact-period:before {
+    content: "\E043";
+}
+
+.glyphicon-contact:before {
+    content: "\E044";
+}
+
+.glyphicon-corporate-actions:before {
+    content: "\E045";
+}
+
+.glyphicon-corporate-govern:before {
+    content: "\E046";
+}
+
+.glyphicon-corporate-news:before {
+    content: "\E047";
+}
+
+.glyphicon-crash-reporter:before {
+    content: "\E048";
+}
+
+.glyphicon-crashreport:before {
+    content: "\E049";
+}
+
+.glyphicon-cross:before {
+    content: "\E04A";
+}
+
+.glyphicon-dashboard:before {
+    content: "\E04B";
+}
+
+.glyphicon-description-circle:before {
+    content: "\E04C";
+}
+
+.glyphicon-description:before {
+    content: "\E04D";
+}
+
+.glyphicon-disability-insurance:before {
+    content: "\E04E";
+}
+
+.glyphicon-doc-center:before {
+    content: "\E04F";
+}
+
+.glyphicon-documents:before {
+    content: "\E050";
+}
+
+.glyphicon-dog:before {
+    content: "\E051";
+}
+
+.glyphicon-down-circle:before {
+    content: "\E052";
+}
+
+.glyphicon-download-alt:before {
+    content: "\E053";
+}
+
+.glyphicon-download:before {
+    content: "\E054";
+}
+
+.glyphicon-drag-and-drop:before {
+    content: "\E055";
+}
+
+.glyphicon-earphone:before {
+    content: "\E056";
+}
+
+.glyphicon-emergency-car:before {
+    content: "\E057";
+}
+
+.glyphicon-envelope:before {
+    content: "\E058";
+}
+
+.glyphicon-error-filled:before {
+    content: "\E059";
+}
+
+.glyphicon-error-message:before {
+    content: "\E05A";
+}
+
+.glyphicon-error:before {
+    content: "\E05B";
+}
+
+.glyphicon-estimated-dividends:before {
+    content: "\E05C";
+}
+
+.glyphicon-examples:before {
+    content: "\E05D";
+}
+
+.glyphicon-exclamation-sign:before {
+    content: "\E05E";
+}
+
+.glyphicon-exclamation:before {
+    content: "\E05F";
+}
+
+.glyphicon-experience:before {
+    content: "\E060";
+}
+
+.glyphicon-eye-open:before {
+    content: "\E061";
+}
+
+.glyphicon-facetime-video:before {
+    content: "\E062";
+}
+
+.glyphicon-facts:before {
+    content: "\E063";
+}
+
+.glyphicon-faq-1:before {
+    content: "\E064";
+}
+
+.glyphicon-faq-online:before {
+    content: "\E065";
+}
+
+.glyphicon-faq:before {
+    content: "\E066";
+}
+
+.glyphicon-file:before {
+    content: "\E067";
+}
+
+.glyphicon-financial-calendar:before {
+    content: "\E068";
+}
+
+.glyphicon-financial-figures:before {
+    content: "\E069";
+}
+
+.glyphicon-financial-investements:before {
+    content: "\E06A";
+}
+
+.glyphicon-financial-reports-app:before {
+    content: "\E06B";
+}
+
+.glyphicon-folder-close:before {
+    content: "\E06C";
+}
+
+.glyphicon-folder-open:before {
+    content: "\E06D";
+}
+
+.glyphicon-freelancer-clients:before {
+    content: "\E06E";
+}
+
+.glyphicon-fudge:before {
+    content: "\E06F";
+}
+
+.glyphicon-fullscreen:before {
+    content: "\E070";
+}
+
+.glyphicon-further-companies:before {
+    content: "\E071";
+}
+
+.glyphicon-glas-insurance:before {
+    content: "\E072";
+}
+
+.glyphicon-glass:before {
+    content: "\E073";
+}
+
+.glyphicon-glossary:before {
+    content: "\E074";
+}
+
+.glyphicon-hand-up:before {
+    content: "\E075";
+}
+
+.glyphicon-health-insurance:before {
+    content: "\E076";
+}
+
+.glyphicon-history:before {
+    content: "\E077";
+}
+
+.glyphicon-home:before {
+    content: "\E078";
+}
+
+.glyphicon-householder-insurance:before {
+    content: "\E079";
+}
+
+.glyphicon-how-it-works:before {
+    content: "\E07A";
+}
+
+.glyphicon-icon-error:before {
+    content: "\E07B";
+}
+
+.glyphicon-icon-search:before {
+    content: "\E07C";
+}
+
+.glyphicon-important-links:before {
+    content: "\E07D";
+}
+
+.glyphicon-inbox:before {
+    content: "\E07E";
+}
+
+.glyphicon-info-sign:before {
+    content: "\E07F";
+}
+
+.glyphicon-information:before {
+    content: "\E080";
+}
+
+.glyphicon-institutional-clients:before {
+    content: "\E081";
+}
+
+.glyphicon-interesting-1:before {
+    content: "\E082";
+}
+
+.glyphicon-interesting:before {
+    content: "\E083";
+}
+
+.glyphicon-ir-app:before {
+    content: "\E084";
+}
+
+.glyphicon-legal-form:before {
+    content: "\E085";
+}
+
+.glyphicon-liability-insurance:before {
+    content: "\E086";
+}
+
+.glyphicon-life-insurance:before {
+    content: "\E087";
+}
+
+.glyphicon-list:before {
+    content: "\E088";
+}
+
+.glyphicon-lock:before {
+    content: "\E089";
+}
+
+.glyphicon-lupe:before {
+    content: "\E08A";
+}
+
+.glyphicon-mail:before {
+    content: "\E08B";
+}
+
+.glyphicon-mandates:before {
+    content: "\E08C";
+}
+
+.glyphicon-market-capitalisation:before {
+    content: "\E08D";
+}
+
+.glyphicon-member-cv:before {
+    content: "\E08E";
+}
+
+.glyphicon-member:before {
+    content: "\E08F";
+}
+
+.glyphicon-minus-circle:before {
+    content: "\E090";
+}
+
+.glyphicon-minus-sign:before {
+    content: "\E091";
+}
+
+.glyphicon-minus:before {
+    content: "\E092";
+}
+
+.glyphicon-modular-conception:before {
+    content: "\E093";
+}
+
+.glyphicon-money-transfer:before {
+    content: "\E094";
+}
+
+.glyphicon-nr1-filled:before {
+    content: "\E095";
+}
+
+.glyphicon-nr1:before {
+    content: "\E096";
+}
+
+.glyphicon-nr2-filled:before {
+    content: "\E097";
+}
+
+.glyphicon-nr2:before {
+    content: "\E098";
+}
+
+.glyphicon-nr3-filled:before {
+    content: "\E099";
+}
+
+.glyphicon-nr3:before {
+    content: "\E09A";
+}
+
+.glyphicon-nr4-filled:before {
+    content: "\E09B";
+}
+
+.glyphicon-nr4:before {
+    content: "\E09C";
+}
+
+.glyphicon-nr5-filled:before {
+    content: "\E09D";
+}
+
+.glyphicon-nr5:before {
+    content: "\E09E";
+}
+
+.glyphicon-nr6-filled:before {
+    content: "\E09F";
+}
+
+.glyphicon-nr7-filled:before {
+    content: "\E0A0";
+}
+
+.glyphicon-number-stockholder:before {
+    content: "\E0A1";
+}
+
+.glyphicon-ok-circle:before {
+    content: "\E0A2";
+}
+
+.glyphicon-ok-filled:before {
+    content: "\E0A3";
+}
+
+.glyphicon-ok-master:before {
+    content: "\E0A4";
+}
+
+.glyphicon-ok:before {
+    content: "\E0A5";
+}
+
+.glyphicon-ok_circle:before {
+    content: "\E0A6";
+}
+
+.glyphicon-online-calculator:before {
+    content: "\E0A7";
+}
+
+.glyphicon-online-distribution:before {
+    content: "\E0A8";
+}
+
+.glyphicon-online-request:before {
+    content: "\E0A9";
+}
+
+.glyphicon-online-service-1:before {
+    content: "\E0AA";
+}
+
+.glyphicon-online-service:before {
+    content: "\E0AB";
+}
+
+.glyphicon-order-information:before {
+    content: "\E0AC";
+}
+
+.glyphicon-pattern-of-dividends:before {
+    content: "\E0AD";
+}
+
+.glyphicon-payments:before {
+    content: "\E0AE";
+}
+
+.glyphicon-pension-fund:before {
+    content: "\E0AF";
+}
+
+.glyphicon-people:before {
+    content: "\E0B0";
+}
+
+.glyphicon-personal-data:before {
+    content: "\E0B1";
+}
+
+.glyphicon-plus-minus:before {
+    content: "\E0B2";
+}
+
+.glyphicon-plus-sign:before {
+    content: "\E0B3";
+}
+
+.glyphicon-plus:before {
+    content: "\E0B4";
+}
+
+.glyphicon-previous-appointements:before {
+    content: "\E0B5";
+}
+
+.glyphicon-print:before {
+    content: "\E0B6";
+}
+
+.glyphicon-private-clients:before {
+    content: "\E0B7";
+}
+
+.glyphicon-product-package:before {
+    content: "\E0B8";
+}
+
+.glyphicon-question-filled:before {
+    content: "\E0B9";
+}
+
+.glyphicon-radiobutton-inlay:before {
+    content: "\E0BA";
+}
+
+.glyphicon-radiobutton-outline:before {
+    content: "\E0BB";
+}
+
+.glyphicon-rates-goal:before {
+    content: "\E0BC";
+}
+
+.glyphicon-ratios:before {
+    content: "\E0BD";
+}
+
+.glyphicon-remedy:before {
+    content: "\E0BE";
+}
+
+.glyphicon-remember:before {
+    content: "\E0BF";
+}
+
+.glyphicon-remove-sign:before {
+    content: "\E0C0";
+}
+
+.glyphicon-remove:before {
+    content: "\E0C1";
+}
+
+.glyphicon-repeat:before {
+    content: "\E0C2";
+}
+
+.glyphicon-results:before {
+    content: "\E0C3";
+}
+
+.glyphicon-retirement-provisions:before {
+    content: "\E0C4";
+}
+
+.glyphicon-retirement-stock:before {
+    content: "\E0C5";
+}
+
+.glyphicon-review-rates:before {
+    content: "\E0C6";
+}
+
+.glyphicon-review:before {
+    content: "\E0C7";
+}
+
+.glyphicon-road:before {
+    content: "\E0C8";
+}
+
+.glyphicon-schedule:before {
+    content: "\E0C9";
+}
+
+.glyphicon-search:before {
+    content: "\E0CA";
+}
+
+.glyphicon-search2:before {
+    content: "\E0CB";
+}
+
+.glyphicon-search3:before {
+    content: "\E0CC";
+}
+
+.glyphicon-searching-consultant:before {
+    content: "\E0CD";
+}
+
+.glyphicon-searching-rates:before {
+    content: "\E0CE";
+}
+
+.glyphicon-setup:before {
+    content: "\E0CF";
+}
+
+.glyphicon-share:before {
+    content: "\E0D0";
+}
+
+.glyphicon-shares-calculator:before {
+    content: "\E0D1";
+}
+
+.glyphicon-star-empty:before {
+    content: "\E0D2";
+}
+
+.glyphicon-star:before {
+    content: "\E0D3";
+}
+
+.glyphicon-stats:before {
+    content: "\E0D4";
+}
+
+.glyphicon-stealtracking:before {
+    content: "\E0D5";
+}
+
+.glyphicon-stock-actual:before {
+    content: "\E0D6";
+}
+
+.glyphicon-stock-balance:before {
+    content: "\E0D7";
+}
+
+.glyphicon-stockholder-meeting:before {
+    content: "\E0D8";
+}
+
+.glyphicon-stockholders-meeting2:before {
+    content: "\E0D9";
+}
+
+.glyphicon-stocks:before {
+    content: "\E0DA";
+}
+
+.glyphicon-subscribing-news:before {
+    content: "\E0DB";
+}
+
+.glyphicon-subscribing-report:before {
+    content: "\E0DC";
+}
+
+.glyphicon-terms:before {
+    content: "\E0DD";
+}
+
+.glyphicon-th-large:before {
+    content: "\E0DE";
+}
+
+.glyphicon-th-list:before {
+    content: "\E0DF";
+}
+
+.glyphicon-th:before {
+    content: "\E0E0";
+}
+
+.glyphicon-time:before {
+    content: "\E0E1";
+}
+
+.glyphicon-tips:before {
+    content: "\E0E2";
+}
+
+.glyphicon-transmission:before {
+    content: "\E0E3";
+}
+
+.glyphicon-travel-insurance:before {
+    content: "\E0E4";
+}
+
+.glyphicon-us-gb:before {
+    content: "\E0E5";
+}
+
+.glyphicon-user:before {
+    content: "\E0E6";
+}
+
+.glyphicon-video:before {
+    content: "\E0E7";
+}
+
+.glyphicon-voting-confidence:before {
+    content: "\E0E8";
+}
+
+.glyphicon-whatfor:before {
+    content: "\E0E9";
+}
+
+.glyphicon-whole-voting-confidence:before {
+    content: "\E0EA";
+}
+
+.glyphicon-why:before {
+    content: "\E0EB";
+}

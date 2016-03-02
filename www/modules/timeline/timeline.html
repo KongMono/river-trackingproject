@@ -1,0 +1,33 @@
+<ion-view view-title="Timeline">
+    <ion-content class="padding" style="bottom: 10px;">
+        <section id="cd-timeline" class="cd-container">
+            <div ng-repeat="activity in timeline">
+                <div class="cd-timeline-block">
+                    <!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+                    <div class="cd-timeline-picture text-center dark">
+                        <img ng-src="/img/{{activity.profilePicture}}"></img>
+                    </div>
+                    <!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+                    <div class="cd-timeline-content padding dark">
+                        <h5 class="marginBottom0 marginTop0">{{activity.title}}</h5>
+                        <p class="marginTop5 cd-author">by {{activity.author}} on {{activity.date | date: "d MMM"}}</p>
+                        <p class="timelineText">{{activity.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </ion-content>
+    <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+            <label class="item-input-wrapper">
+                <textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500"
+                msd-elastic style="resize: none;height: 20px;overflow:hidden;word-wrap:break-word;background-color: #f4f4f4;width: 100%;"></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+</ion-view>

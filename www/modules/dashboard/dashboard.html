@@ -1,0 +1,85 @@
+<ion-view view-title="Dashboard">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-small button-clear" style="font-size: 44px;" modal-select="" ng-model="selectedDate" option-property="name"
+        options="selectFilterDate" select="shoutLoud(newValue, oldValue)" on-reset="shoutReset()" modal-title="Select Date">
+            <div class="option">
+                <h2>{{option.name}}</h2>
+                <p>{{option.scope}}</p>
+            </div>
+            <i style="font-size: 23px;vertical-align: middle;" class="fa fa-calendar-check-o"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list list-inset" style="margin: 10px 10px;">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="ชื่อโครงการ หรือ ผู้รับผิดชอบ" ng-model="searchProject" style="line-height: 23px;">
+            </label>
+        </div>
+        <ion-slide-box show-pager="false" pager-click="navSlide(index)">
+            <ion-slide style="height: 230px;">
+                <div class="row font-white" ng-repeat="d in dataStatus" ng-if="$index % 2 === 0">
+                    <div class="col col-50" ng-if="$index < dataStatus.length">
+                        <div class="card margin0" ng-class="setColorBg(dataStatus[$index])" ng-click="clickStatus(dataStatus[$index])" ng-style="greyImg(dataStatus[$index])">
+                            <div class="row">
+                                <div class="col">
+                                    <i ng-class="setIcon(dataStatus[$index])"></i>
+                                </div>
+                                <div class="col right">
+                                    <h1 class="font-white">{{dataStatus[$index].num}}</h1>
+                                    <p style="width: 70px;font-weight: bold;">{{dataStatus[$index].title}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-50" ng-if="$index + 1 < dataStatus.length">
+                        <div class="card margin0" ng-class="setColorBg(dataStatus[$index + 1])" ng-click="clickStatus(dataStatus[$index + 1])" ng-style="greyImg(dataStatus[$index + 1])">
+                            <div class="row">
+                                <div class="col">
+                                    <i ng-class="setIcon(dataStatus[$index + 1])"></i>
+                                </div>
+                                <div class="col right">
+                                    <h1 class="font-white">{{dataStatus[$index + 1].num}}</h1>
+                                    <p style="width: 70px;font-weight: bold;">{{dataStatus[$index + 1].title}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>
+            <ion-slide style="height: 230px;">
+                <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_Z3_1.9L_1998.jpg">
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="list card" ng-repeat="p in dataProject | filter:searchProject">
+            <div class="item" style="padding: 0">
+                <div class="row">
+                    <div class="col">
+                        <div class="row" style="padding: 0">
+                            <i style="font-size: 40px;" class="icon ion-record" ng-class="setColorStatus(p)"></i>
+                            <p class="padding" style="height: 30px;line-height: 20px;">{{p.title}}: {{p.person}}</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 right">
+                        <p class="padding" style="height: 30px;font-size: 20px;font-weight: bold;">{{p.progress}}%</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!--<p>start: {{p.startDate}}</p>-->
+                    </div>
+                    <div class="col col-75 right">
+                        <p style="line-height: 23px;">{{p.startDate}} - {{p.endDate}}</p>
+                    </div>
+                </div>
+                <div class="button-bar">
+                    <a class="button" style="font-size: 13px;font-weight: bold;" ng-click="showEngineerlist($event)">วิศวกร</a>
+                    <a href="#/app/dashboard/timeline" class="button" style="font-size: 13px;font-weight: bold;">พูดคุย</a>
+                    <a href="#/app/dashboard/description" ng-click="selectProject(p)" class="button" style="font-size: 13px;font-weight: bold;">รายละเอียด</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
