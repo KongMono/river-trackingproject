@@ -9,4 +9,3 @@
 *.log
 /www/dist/*
 *.min.*
-.bowerrc
