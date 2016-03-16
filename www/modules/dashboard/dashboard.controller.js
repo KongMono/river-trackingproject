@@ -4,7 +4,6 @@ angular.module('river.controllers')
         $ionicScrollDelegate, $filter, $scope, $timeout, $ionicSlideBoxDelegate, DataFactory, Scopes) {
 
         Scopes.store('DashboardCtrl', $scope);
-        $scope.selectedDate = DataFactory.selectFilterDate[0].name;
 
         $ionicPlatform.ready(function () {
 
@@ -13,14 +12,10 @@ angular.module('river.controllers')
             $scope.dataProject = DataFactory.dataProject;
             
             // set defaults selectFilterDate
-            $scope.selectFilterDate = DataFactory.selectFilterDate;
+         
 
             $scope.masterdataProject = $scope.dataProject;
             $scope.chooseStatus = $scope.dataStatus[0];
-
-            $scope.shoutLoud = function (newValuea, oldValue) {
-                console.log("changed from " + JSON.stringify(oldValue) + " to " + JSON.stringify(newValuea));
-            };
 
             $ionicLoading.hide();
         });
@@ -28,6 +23,8 @@ angular.module('river.controllers')
         $scope.navSlide = function (index) {
             $ionicSlideBoxDelegate.slide(index, 500);
         }
+        
+        
 
         $scope.greyImg = function (obj) {
             var style;
@@ -124,5 +121,30 @@ angular.module('river.controllers')
             });
 
         };
+        
+          $scope.showfilterTime = function () {
+            $ionicModal.fromTemplateUrl('modules/dashboard/dashboard.timelist.popver.html', {
+                scope: $scope,
+                animation: 'slide-in-up'
+            }).then(function (modal) {
+                $scope.modal = modal;
+                $scope.openModal();
+            });
+
+            $scope.openModal = function () {
+                $scope.modal.show();
+            };
+
+            $scope.closeModal = function () {
+                $scope.modal.hide();
+            };
+
+            $scope.$on('$destroy', function () {
+                $scope.modal.remove();
+            });
+
+        };
+        
+        
 
     });

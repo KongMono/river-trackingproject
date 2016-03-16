@@ -1,5 +1,12 @@
-<ion-modal-view>
-    <ion-content ng-controller="EngineerlistCtrl">
+<ion-modal-view ng-controller="EngineerlistCtrl">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">วิศวกร</h1>
+        <button class="button button-clear button-positive" ng-click="close()">
+            ปิด
+        </button>
+    </ion-header-bar>
+
+    <ion-content>
         <div class="list">
             <div class="item item-divider">
                 วิศวกรรมโยธา
@@ -20,8 +27,6 @@
                เสกสรรค์ นามสกุล
             </a>
         </div>
-        <button class="button button-clear button-positive" style="width: 100%;" ng-click="close()">
-            ปิด
-        </button>
+
     </ion-content>
 </ion-modal-view>

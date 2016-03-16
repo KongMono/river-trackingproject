@@ -1,11 +1,6 @@
 <ion-view view-title="Dashboard">
     <ion-nav-buttons side="secondary">
-        <button class="button button-small button-clear" style="font-size: 44px;" modal-select="" ng-model="selectedDate" option-property="name"
-        options="selectFilterDate" select="shoutLoud(newValue, oldValue)" on-reset="shoutReset()" modal-title="Select Date">
-            <div class="option">
-                <h2>{{option.name}}</h2>
-                <p>{{option.scope}}</p>
-            </div>
+        <button class="button button-small button-clear" style="font-size: 44px;" ng-click="showfilterTime()">
             <i style="font-size: 23px;vertical-align: middle;" class="fa fa-calendar-check-o"></i>
         </button>
     </ion-nav-buttons>
@@ -16,8 +11,8 @@
                 <input type="text" placeholder="ชื่อโครงการ หรือ ผู้รับผิดชอบ" ng-model="searchProject" style="line-height: 23px;">
             </label>
         </div>
-        <ion-slide-box show-pager="false" pager-click="navSlide(index)">
-            <ion-slide style="height: 230px;">
+        <!--<ion-slide-box show-pager="false" pager-click="navSlide(index)">-->
+            <!--<ion-slide style="height: 230px;">-->
                 <div class="row font-white" ng-repeat="d in dataStatus" ng-if="$index % 2 === 0">
                     <div class="col col-50" ng-if="$index < dataStatus.length">
                         <div class="card margin0" ng-class="setColorBg(dataStatus[$index])" ng-click="clickStatus(dataStatus[$index])" ng-style="greyImg(dataStatus[$index])">
@@ -47,11 +42,11 @@
                         </div>
                     </div>
                 </div>
-            </ion-slide>
-            <ion-slide style="height: 230px;">
-                <img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_Z3_1.9L_1998.jpg">
-            </ion-slide>
-        </ion-slide-box>
+            <!--</ion-slide>-->
+            <!--<ion-slide style="height: 230px;">
+                <img style="width: 100%;" ng-src="http://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_Z3_1.9L_1998.jpg">
+            </ion-slide>-->
+        <!--</ion-slide-box>-->
 
         <div class="list card" ng-repeat="p in dataProject | filter:searchProject">
             <div class="item" style="padding: 0">

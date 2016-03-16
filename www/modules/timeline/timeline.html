@@ -1,5 +1,5 @@
 <ion-view view-title="Timeline">
-    <ion-content class="padding" style="bottom: 10px;">
+    <ion-content class="padding has-footer">
         <section id="cd-timeline" class="cd-container">
             <div ng-repeat="activity in timeline">
                 <div class="cd-timeline-block">
@@ -16,7 +16,6 @@
                 </div>
             </div>
         </section>
-
     </ion-content>
     <form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
         <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
@@ -25,6 +24,8 @@
                 msd-elastic style="resize: none;height: 20px;overflow:hidden;word-wrap:break-word;background-color: #f4f4f4;width: 100%;"></textarea>
             </label>
             <div class="footer-btn-wrap">
+                <button class="button button-icon icon ion-android-image footer-btn" ng-click="pickImage()">
+                </button>
                 <button class="button button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!input.message || input.message === ''">
                 </button>
             </div>

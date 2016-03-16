@@ -1,0 +1,15 @@
+<ion-modal-view ng-controller="TimelistCtrl">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">เลือกเวลา</h1>
+        <button class="button button-clear button-positive" ng-click="close()">
+            ปิด
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <a class="item" href="#" ng-repeat="s in selectFilterDate" ng-click="chooseTime()">
+                {{s.name}}
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

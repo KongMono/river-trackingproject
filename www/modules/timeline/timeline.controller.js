@@ -1,6 +1,46 @@
 angular.module('river.controllers')
-    .controller('TimelineCtrl', function ($scope) {
+    .controller('TimelineCtrl', function($scope, $cordovaImagePicker) {
 
+        // I emit this event from the monospaced.elastic directive, read line 480 in the Codepen JS
+        $scope.$on('taResize', function(e, ta) {
+            console.log('taResize');
+            if (!ta) return;
+
+            var taHeight = ta[0].offsetHeight;
+            console.log('taHeight: ' + taHeight);
+
+            if (!footerBar) return;
+
+            var newFooterHeight = taHeight + 10;
+            newFooterHeight = (newFooterHeight > 44) ? newFooterHeight : 44;
+
+            footerBar.style.height = newFooterHeight + 'px';
+
+            // for iOS you will need to add the keyboardHeight to the scroller.style.bottom
+            if (device.platform.toLowerCase() === 'ios') {
+                scroller.style.bottom = newFooterHeight + keyboardHeight + 'px';
+            } else {
+                scroller.style.bottom = newFooterHeight + 'px';
+            }
+        });
+
+        $scope.pickImage = function(params) {
+            var options = {
+                maximumImagesCount: 10,
+                width: 800,
+                height: 800,
+                quality: 80
+            };
+
+            $cordovaImagePicker.getPictures(options)
+                .then(function(results) {
+                    for (var i = 0; i < results.length; i++) {
+                        console.log('Image URI: ' + results[i]);
+                    }
+                }, function(error) {
+                    console.error(error);
+                });
+        }
         $scope.timeline = [
             {
                 date: new Date(),

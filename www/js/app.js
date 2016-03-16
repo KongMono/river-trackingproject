@@ -12,8 +12,8 @@ angular.module('river', [
         template: '<ion-spinner icon="android"></ion-spinner><br>Loading...'
     })
 
-    .run(function ($ionicPlatform, $rootScope) {
-        $ionicPlatform.ready(function () {
+    .run(function($ionicPlatform, $rootScope, $timeout) {
+        $ionicPlatform.ready(function() {
             if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
                 cordova.plugins.Keyboard.disableScroll(true);
@@ -22,19 +22,25 @@ angular.module('river', [
                 StatusBar.styleLightContent();
             }
 
-            $rootScope.$on('scope.stored', function (event, data) {
+            $rootScope.$on('scope.stored', function(event, data) {
                 console.log("scope.stored", data);
             });
         });
 
     })
 
-    .config(function ($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+    .config(function($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
 
         $ionicConfigProvider.views.swipeBackEnabled(false);
         $ionicConfigProvider.views.transition("android");
 
         $stateProvider
+
+            .state('login', {
+                url: '/login',
+                templateUrl: 'modules/authentication/login.html',
+                controller: 'LoginCtrl'
+            })
             .state('app', {
                 url: '/app',
                 abstract: true,
@@ -82,7 +88,7 @@ angular.module('river', [
                 views: {
                     'menuContent': {
                         templateUrl: 'modules/period/period.html',
-                        controller: 'DescriptionCtrl'
+                        controller: 'PeriodCtrl'
                     }
                 }
             })
@@ -90,10 +96,11 @@ angular.module('river', [
                 url: '/setting',
                 views: {
                     'menuContent': {
-                        templateUrl: 'modules/setting/setting.html'
+                        templateUrl: 'modules/setting/setting.html',
+                        controller: 'SettingCtrl'
                     }
                 }
             });
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/app/dashboard');
+        $urlRouterProvider.otherwise('/login');
     });
